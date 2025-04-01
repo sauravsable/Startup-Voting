@@ -1,0 +1,34 @@
+.section-social-links {
+    padding: 4.8rem 0rem;
+    border-top: 1px solid #313441;
+    border-bottom: 1px solid #313441;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8rem;
+}
+
+.social-link:link,
+.social-link:visited {
+    border: 2px solid #eb3656;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-link:hover,
+.social-link:active {
+    background-color: #ef5e78;
+    border: 2px solid #ef5e78;
+    transform: translateY(-0.2rem);
+}
+
+.social-link-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    fill: #eb3656;
+}
+
+.social-link:hover .social-link-icon {
+    fill: #e6e6e8;
+}

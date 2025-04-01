@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #cccdd0;
+  background-color: #1a1d2c;
+
+  -webkit-font-smoothing: antialiased;
+  /* For Chrome, Safari, and Opera */
+  -moz-osx-font-smoothing: grayscale;
+  /* For Firefox on macOS */
+  text-rendering: optimizeLegibility;
+  /* For better readability */
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: #e6e6e8;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.container {
+  max-width: 132rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}

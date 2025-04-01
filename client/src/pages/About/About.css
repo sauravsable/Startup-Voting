@@ -1,0 +1,44 @@
+.section-about-us {
+    margin-top: 9.8rem;
+    padding-bottom: 9.8rem;
+    border-bottom: 1px solid #313441;
+}
+
+.about-us-heading {
+    line-height: 1.6;
+    color: #e6e6e6;
+    margin-bottom: 4.8rem;
+    font-size: 4.8rem;
+    font-weight: 500;
+    letter-spacing: -0.25px;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.aboutus-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.aboutus-logo-icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #eb3656;
+}
+
+.aboutus-logo-text {
+    font-size: 4.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.about-us-body {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    letter-spacing: 0.25px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #cccdd0;
+}

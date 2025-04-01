@@ -1,0 +1,114 @@
+.section-hero {
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 62.8rem;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.hero-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+.hero-text {
+    align-self: center;
+}
+
+.hero-img {
+    width: 80%;
+    height: 80vh;
+}
+
+.hero-img-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-btn-container {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.btn:link,
+.btn:visited {
+    display: block;
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 9px;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+    background-color: #1a1d2c;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.btn-full {
+    background-color: #eb3656;
+    color: #e6e6e8;
+    transition: all 0.3s;
+    border: none;
+    font-family: inherit;
+    padding: 1.6rem 3.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.btn-full:hover {
+    background-color: #ef5e78;
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 1.8rem 0 rgba(235, 54, 87, 0.16);
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+    color: #777;
+}
+
+.hero-review-section {
+    margin-top: 8rem;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.customers-img {
+    display: flex;
+}
+
+.customer-img {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #1a1d2c;
+}
+
+.customer-img:last-child {
+    margin-right: 0;
+}
+
+.hero-review-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.hero-review-text span {
+    color: #eb3656;
+    font-weight: 700;
+}
