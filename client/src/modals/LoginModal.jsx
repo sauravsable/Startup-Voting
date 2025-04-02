@@ -25,13 +25,13 @@ export const LoginModal = () => {
       dispatch(hideLoginModal());
     }
 
-    if(error){
-      dispatch(hideLoginModal());
+    if(error && email && password){
+    //   dispatch(hideLoginModal());
       loginFailedToast(error);
       dispatch(clearErrors())
     }
 
-  },[dispatch,error,isAuthenticated]);  
+  },[dispatch,error,isAuthenticated]);
 
 
   const getLoginData = async (e) => {

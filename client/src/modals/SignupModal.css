@@ -8,7 +8,7 @@
     transform: translateX(-50%);
     padding: 3.2rem;
     border-radius: 11px;
-    z-index: 2;
+    z-index: 20;
 }
 
 .signup-form-heading {

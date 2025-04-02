@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { showLoginModal, showSignModal } from "../../slice/userSlice";
+import { hideLoginModal, hideSignModal, showLoginModal, showSignModal } from "../../slice/userSlice";
 import { toggleMenuState } from "../../slice/mobNavSlice";
 import './Header.css';
 import { logout } from "../../thunk/userThunk";
@@ -102,7 +102,7 @@ export const Header = () => {
               to="/showtimes"
               style={pageName === "showtimes" ? selectionTab : {}}
             >
-              IdeaHub 
+              IdeaHub
             </Link>
           </li>
           <li>
@@ -138,7 +138,8 @@ export const Header = () => {
             e.stopPropagation();
             isAuthenticated && user.role === "user"
               ? navigate("/customer")
-              : dispatch(showLoginModal());
+              : (dispatch(showLoginModal()) &&
+                  dispatch(hideSignModal()));
           }}
         >
           <svg
@@ -230,6 +231,7 @@ export const Header = () => {
                     onClick={() => {
                       toggleNavSignOptionsVis();
                       dispatch(showSignModal());
+                      dispatch(hideLoginModal());
                     }}
                   >
                     Sign up
@@ -241,6 +243,7 @@ export const Header = () => {
                     onClick={() => {
                       toggleNavSignOptionsVis();
                       dispatch(showLoginModal());
+                      dispatch(hideSignModal());
                     }}
                   >
                     Sign in

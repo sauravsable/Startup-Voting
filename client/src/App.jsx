@@ -12,15 +12,35 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Footer } from "./components/Footer/Footer";
 import { loadUser } from "./thunk/userThunk";
+import { hideLoginModal, hideSignModal } from "./slice/userSlice";
 
 function App() {
   const dispatch = useDispatch();
+  const { signModalState, loginModalState } =useSelector((store) => store.user);
+
+  useEffect(()=>
+{
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        if (signModalState) {
+          dispatch(hideSignModal());
+        }
+        if (loginModalState) {
+          dispatch(hideLoginModal());
+        }
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+
+},[signModalState,loginModalState])
 
   useEffect(() => {
     dispatch(loadUser());
   }, [dispatch]);
-  
-  const { signModalState, loginModalState } =useSelector((store) => store.user);
+
   return (
     <div>
       <ToastContainer />

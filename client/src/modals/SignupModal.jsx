@@ -22,8 +22,8 @@ export const SignupModal = () => {
   };
 
   useEffect(()=>{
-    if(error){
-      dispatch(hideSignModal());
+    if(error && name && email && password){
+    //   dispatch(hideSignModal());
       signupFailedToast(error);
       dispatch(clearErrors())
     }
@@ -31,7 +31,7 @@ export const SignupModal = () => {
     if(isAuthenticated){
       dispatch(hideSignModal());
     }
-  },[dispatch,error,isAuthenticated]);  
+  },[dispatch,error,isAuthenticated]);
 
   const handleDataInsert = async (e) => {
     e.preventDefault();
